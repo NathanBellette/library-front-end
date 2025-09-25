@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900;
+  }
+  
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .form-group {
+    @apply mb-6;
+  }
+  
+  .form-label {
+    @apply block mb-2 font-medium text-gray-900;
+  }
+  
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  .form-input--error {
+    @apply border-red-500;
+  }
+  
+  .form-input--textarea {
+    @apply resize-y min-h-20;
+  }
+  
+  .form-error {
+    @apply block mt-1 text-red-600 text-sm;
+  }
+  
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+  }
+  
+  .modal {
+    @apply bg-white rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto;
+  }
+  
+  .modal__header {
+    @apply flex items-center justify-between p-6 border-b border-gray-200;
+  }
+  
+  .modal__header h2 {
+    @apply m-0 text-gray-900 text-lg font-semibold;
+  }
+  
+  .modal__close {
+    @apply bg-none border-none text-xl cursor-pointer text-gray-400 p-1 rounded hover:text-gray-600;
+  }
+  
+  .modal__form {
+    @apply p-6;
+  }
+  
+  .modal__actions {
+    @apply flex gap-3 justify-end mt-6 pt-6 border-t border-gray-200;
+  }
+}
